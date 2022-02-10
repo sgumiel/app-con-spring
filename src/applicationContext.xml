@@ -7,25 +7,27 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <bean id="usuarioBaneadoService" class="UsuarioBaneadoService"></bean>
-  <bean id="usuariosService" class="UsuariosService">
+  <context:component-scan base-package="appcomentarios"/>
+  <!--
+  <bean id="usuarioBaneadoService" class="appcomentarios.UsuarioBaneadoService"></bean>
+  <bean id="usuariosService" class="appcomentarios.UsuariosService">
     <property name="usuarioBaneadoService" ref="usuarioBaneadoService"></property>
   </bean>
-  <bean id="comentariosService" class="ComentariosService">
+  <bean id="comentariosService" class="appcomentarios.ComentariosService">
     <property name="usuariosService" ref="usuariosService"></property>
   </bean>
-  <bean id="comprarDineroService" class="ComprarDineroService">
+  <bean id="comprarDineroService" class="appcomentarios.ComprarDineroService">
     <property name="usuariosService" ref="usuariosService"></property>
   </bean>
-  <bean id="mostrarPerfilService" class="MostrarPerfilService">
+  <bean id="mostrarPerfilService" class="appcomentarios.MostrarPerfilService">
     <property name="usuariosService" ref="usuariosService"></property>
   </bean>
-  <bean id="principalService" class="PrincipalService">
+  <bean id="principalService" class="appcomentarios.PrincipalService">
     <property name="comentariosService" ref="comentariosService"></property>
     <property name="comprarDineroService" ref="comprarDineroService"></property>
     <property name="mostrarPerfilService" ref="mostrarPerfilService"></property>
 
   </bean>
-
+-->
 
 </beans>

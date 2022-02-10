@@ -1,3 +1,5 @@
+package appcomentarios;
+
 public class Usuario {
 
   String nombre;

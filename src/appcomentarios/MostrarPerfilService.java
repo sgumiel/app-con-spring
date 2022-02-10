@@ -1,5 +1,12 @@
+package appcomentarios;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class MostrarPerfilService implements IMostrarPerfil{
 
+  @Autowired
   private UsuariosService usuariosService;
 
   @Override
@@ -12,9 +19,4 @@ public class MostrarPerfilService implements IMostrarPerfil{
     }
 
   }
-
-  public void setUsuariosService(UsuariosService usuariosService){
-    this.usuariosService = usuariosService;
-  }
-
 }

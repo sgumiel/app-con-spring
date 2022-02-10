@@ -1,7 +1,10 @@
-import org.w3c.dom.stylesheets.LinkStyle;
+package appcomentarios;
+
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UsuarioBaneadoService {
 
     private List<String> usuariosBaneados = List.of("Juan");

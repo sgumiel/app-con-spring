@@ -1,7 +1,14 @@
+package appcomentarios;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.Map;
 
+@Service
 public class UsuariosService {
 
+  @Autowired
   private UsuarioBaneadoService usuarioBaneadoService;
 
   private Map<String, Usuario> usuarios = Map.ofEntries(
@@ -17,9 +24,4 @@ public class UsuariosService {
       return null;
     }
   }
-
-  public void setUsuarioBaneadoService(UsuarioBaneadoService usuarioBaneadoService){
-    this.usuarioBaneadoService = usuarioBaneadoService;
-  }
-
 }

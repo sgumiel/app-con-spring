@@ -1,7 +1,18 @@
+package appcomentarios;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class PrincipalService {
 
+  @Autowired
   private IComentarios comentariosService;
+
+  @Autowired
   private IMostrarPerfil mostrarPerfilService;
+
+  @Autowired
   private IComprarDinero comprarDineroService;
 
   public void execute(String[] args){
@@ -13,17 +24,4 @@ public class PrincipalService {
       default -> System.out.println("Comando no reconocido");
     }
   }
-
-  public void setComentariosService(ComentariosService comentariosService){
-    this.comentariosService=comentariosService;
-  }
-
-  public void setMostrarPerfilService(MostrarPerfilService mostrarPerfilService) {
-    this.mostrarPerfilService = mostrarPerfilService;
-  }
-
-  public void setComprarDineroService(ComprarDineroService comprarDineroService) {
-    this.comprarDineroService = comprarDineroService;
-  }
-
 }

@@ -1,5 +1,12 @@
+package appcomentarios;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class ComentariosService implements IComentarios{
 
+  @Autowired
   private UsuariosService usuariosService;
 
   @Override
@@ -11,9 +18,5 @@ public class ComentariosService implements IComentarios{
       System.out.println("El usuario: "+usuario+" comenta lo siguiente: " + comentario);
     }
 
-  }
-
-  public void setUsuariosService(UsuariosService usuariosService) {
-    this.usuariosService = usuariosService;
   }
 }
