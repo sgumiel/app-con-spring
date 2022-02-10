@@ -7,7 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <bean id="usuariosService" class="UsuariosService"></bean>
+  <bean id="usuarioBaneadoService" class="UsuarioBaneadoService"></bean>
+  <bean id="usuariosService" class="UsuariosService">
+    <property name="usuarioBaneadoService" ref="usuarioBaneadoService"></property>
+  </bean>
   <bean id="comentariosService" class="ComentariosService">
     <property name="usuariosService" ref="usuariosService"></property>
   </bean>
