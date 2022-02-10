@@ -1,8 +1,8 @@
 public class PrincipalService {
 
-  private ComentariosService comentariosService;
-  private MostrarPerfilService mostrarPerfilService;
-  private ComprarDineroService comprarDineroService;
+  private IComentarios comentariosService;
+  private IMostrarPerfil mostrarPerfilService;
+  private IComprarDinero comprarDineroService;
 
   public void execute(String[] args){
     switch(args[0]) {

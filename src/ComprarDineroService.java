@@ -1,7 +1,8 @@
-public class ComprarDineroService {
+public class ComprarDineroService implements IComprarDinero{
 
   private UsuariosService usuariosService;
 
+  @Override
   public void comprarDinero(String usuario, Integer cantidad) {
 
     Usuario usu = this.usuariosService.findUsuario(usuario);
